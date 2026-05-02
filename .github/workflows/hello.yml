@@ -1,5 +1,9 @@
 name: Hello Agile
-on: [push]
+on:
+  push:
+    branches: [ dev ]   # Runs only when pushing to dev
+  pull_request:
+    branches: [ main ]  # Runs when PR targets main
 jobs:
 say_hello:
  runs-on: ubuntu-latest
